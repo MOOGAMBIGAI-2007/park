@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Parking System - Vehicle Type</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #e9f5ff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .container {
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 12px rgba(0,0,0,0.2);
+      text-align: center;
+      width: 350px;
+    }
+    h2 {
+      margin-bottom: 20px;
+    }
+    button {
+      width: 80%;
+      padding: 12px;
+      margin: 10px;
+      font-size: 16px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .two-wheeler {
+      background: #28a745;
+      color: white;
+    }
+    .two-wheeler:hover {
+      background: #1e7e34;
+    }
+    .four-wheeler {
+      background: #007bff;
+      color: white;
+    }
+    .four-wheeler:hover {
+      background: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Select Vehicle Type</h2>
+    <button class="two-wheeler" onclick="selectVehicle('Two Wheeler')">🚲 Two Wheeler</button>
+    <button class="four-wheeler" onclick="selectVehicle('Four Wheeler')">🚗 Four Wheeler</button>
+    <p id="message"></p>
+  </div>
+
+  <script>
+    function selectVehicle(type) {
+      document.getElementById("message").style.color = "green";
+      document.getElementById("message").innerText = type + " selected ✅";
+      // You can redirect to another page for slot booking:
+      // window.location.href = type === "Two Wheeler" ? "two.html" : "four.html";
+    }
+  </script>
+</body>
+</html>
