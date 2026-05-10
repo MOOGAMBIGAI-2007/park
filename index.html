@@ -2,65 +2,22 @@
 <html>
 <head>
   <title>Parking System Login</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f0f0f0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-    }
-    .login-box {
-      background: white;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.2);
-      width: 300px;
-      text-align: center;
-    }
-    input {
-      width: 90%;
-      padding: 10px;
-      margin: 10px 0;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-    }
-    button {
-      width: 100%;
-      padding: 10px;
-      background: #007bff;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-    button:hover {
-      background: #0056b3;
-    }
-  </style>
 </head>
 <body>
-  <div class="login-box">
-    <h2>🅿️ Parking System Login</h2>
-    <input type="text" id="username" placeholder="Enter Username">
-    <input type="password" id="password" placeholder="Enter Password">
-    <button onclick="login()">Login</button>
-    <p id="message"></p>
-  </div>
+  <h2>🅿️ Parking System Login</h2>
+  <input type="text" id="username" placeholder="Enter Username">
+  <input type="password" id="password" placeholder="Enter Password">
+  <button onclick="login()">Login</button>
+  <p id="message"></p>
 
   <script>
     function login() {
       const user = document.getElementById("username").value;
       const pass = document.getElementById("password").value;
       if (user === "park" && pass === "1234") {
-        document.getElementById("message").style.color = "green";
-        document.getElementById("message").innerText = "Login Successful ✅";
-        // Redirect to another page if needed:
-        // window.location.href = "dashboard.html";
+        window.location.href = "zones.html"; // ✅ go to vehicle type page
       } else {
-        document.getElementById("message").style.color = "red";
-        document.getElementById("message").innerText = "Invalid Username or Password ❌";
+        document.getElementById("message").innerText = "Invalid Username ❌";
       }
     }
   </script>
