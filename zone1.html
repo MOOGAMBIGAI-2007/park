@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Two Wheeler Parking Zones</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f7f7f7;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .container {
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 12px rgba(0,0,0,0.2);
+      text-align: center;
+      width: 350px;
+    }
+    h2 {
+      margin-bottom: 20px;
+    }
+    button {
+      width: 80%;
+      padding: 12px;
+      margin: 10px;
+      font-size: 16px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .zone1 {
+      background: #ff5733;
+      color: white;
+    }
+    .zone1:hover {
+      background: #c70039;
+    }
+    .zone2 {
+      background: #33c1ff;
+      color: white;
+    }
+    .zone2:hover {
+      background: #006bb3;
+    }
+    .zone3 {
+      background: #28a745;
+      color: white;
+    }
+    .zone3:hover {
+      background: #1e7e34;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>🚲 Two Wheeler Parking</h2>
+    <button class="zone1" onclick="selectZone('Zone 1')">Zone 1</button>
+    <button class="zone2" onclick="selectZone('Zone 2')">Zone 2</button>
+    <button class="zone3" onclick="selectZone('Zone 3')">Zone 3</button>
+    <p id="message"></p>
+  </div>
+
+  <script>
+    function selectZone(zone) {
+      document.getElementById("message").style.color = "green";
+      document.getElementById("message").innerText = zone + " selected ✅";
+      // You can redirect to slot booking page:
+      // window.location.href = zone.toLowerCase() + ".html";
+    }
+  </script>
+</body>
+</html>
